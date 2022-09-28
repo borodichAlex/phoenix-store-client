@@ -45,9 +45,13 @@
       "files": [
         "*.html"
       ],
+      "plugins": ["prettier"],
       "extends": [
         "plugin:@angular-eslint/template/recommended"
-      ]
+      ],
+      "rules": {
+        "prettier/prettier": "warn"
+      }
     }
   ]
 }
