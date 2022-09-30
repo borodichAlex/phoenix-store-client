@@ -1,1 +1,70 @@
-<p>App component works</p>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <mat-nav-list>
+      <div class="first-row">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon style="scale: 1.4;">menu</mat-icon>
+        </button>
+
+        <h1 class="heading heading--mobile">Феникс</h1>
+      </div>
+
+      <a mat-list-item routerLink="products" (click)="sidenav.close()">
+        <mat-icon>store</mat-icon>
+        <span class="nav-caption">Каталог</span>
+      </a>
+
+      <a mat-list-item routerLink="cart" (click)="sidenav.close()">
+        <mat-icon>shopping_cart</mat-icon>
+        <span class="nav-caption">Корзина</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <header>
+      <mat-toolbar color="primary">
+        <div fxHide.gt-xs>
+          <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon style="scale: 1.2;">menu</mat-icon>
+          </button>
+        </div>
+
+        <div style="margin-left: 10px">
+          <a mat-button routerLink="products"><h1 class="heading">Феникс</h1></a>
+        </div>
+
+        <!-- desktop menu -->
+        <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+          <nav fxLayout fxLayoutGap="10px">
+            <button mat-raised-button color="secondary" routerLink="products">Каталог</button>
+            <button mat-raised-button color="accent" routerLink="cart">Корзина</button>
+          </nav>
+        </div>
+
+
+        <div fxFlex fxLayout fxLayoutAlign="end" fxHide.gt-xs>
+          <button mat-raised-button color="accent" routerLink="cart">Корзина</button>
+        </div>
+
+      </mat-toolbar>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- TODO:
+
+  ! Stage 1 (Main logic for users)
+  #. add header with adaptive nav-menu
+  #. add product page (only user logic, NOTE: add admin logic later)
+  #. add product list
+  #. add product item
+  #. add cart page (only for users)
+
+  ! Stage 2 (Auth and main logic for admin)
+  #. add log in / log out in nav-menu
+  #. add log in / registration pages (roles)
+  #. add logic for views (admin / user)
+
+-->

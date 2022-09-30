@@ -1,0 +1,30 @@
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+
+.nav-caption {
+  font-size: 1rem;
+  padding-left: .5em;
+}
+
+.heading {
+  font-size: 1.2rem;
+}
+
+.heading--mobile {
+  padding: .5em 1.5em;
+  margin: 0;
+}
+
+.first-row {
+  padding-left: .5em;
+  margin-bottom: 1em;
+
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}

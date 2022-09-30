@@ -1,0 +1,22 @@
+<mat-card class="card">
+  <img class="card__img" mat-card-image [src]="item.imgUrl" [alt]="item.title" />
+  <mat-card-content class="card__content">
+    <mat-card-title>{{ item.title }}</mat-card-title>
+    <mat-card-subtitle>Цена: {{ item.price }} </mat-card-subtitle>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-form-field class="input-amount" appearance="outline">
+      <mat-label>Количество</mat-label>
+      <input
+        type="number"
+        matInput
+        [formControl]="amountFormControl"
+        placeholder="3"
+      >
+    </mat-form-field>
+    <div class="btn-group">
+      <button class="btn-group__item" mat-raised-button color="accent" (click)="add()">Заказать</button>
+      <button class="btn-group__item" mat-raised-button (click)="open()">Подробнее</button>
+    </div>
+  </mat-card-actions>
+</mat-card>

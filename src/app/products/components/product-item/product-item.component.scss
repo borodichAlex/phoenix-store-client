@@ -1,0 +1,28 @@
+.input-amount {
+  min-width: 100%;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+}
+
+.card__img {
+  padding: .5rem 0;
+  background: linear-gradient(to bottom,  #00A6B9 0%,#00A6B9 15%,#fefefe 85%,#fefefe 100%);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: .5em;
+  flex-wrap: wrap;
+}
+
+.btn-group__item {
+  flex: 1;
+  flex-basis: fit-content;
+  margin: 0 !important;
+}

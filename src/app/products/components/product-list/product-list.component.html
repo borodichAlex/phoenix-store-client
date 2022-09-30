@@ -1,0 +1,8 @@
+<section class="products-container">
+  <div class="product-list">
+    <app-product-item
+      *ngFor="let item of products$ | async"
+      [item]="item"
+    ></app-product-item>
+  </div>
+</section>
